@@ -74,24 +74,24 @@ zennet_model_zoo = {
         'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_cifar100_model_size2M_res32/best-params_rank0.pth',
     },
 
-    'zennet_imagenet1k_flops400M_SE_res192': {
-        'plainnet_str_txt': 'zennet_imagenet1k_flops400M_res192.txt',
-        'pth_path': 'zennet_imagenet1k_flops400M_SE_res192/student_best-params_rank0.pth',
+    'zennet_imagenet1k_flops400M_SE_res224': {
+        'plainnet_str_txt': 'zennet_imagenet1k_flops400M_res224.txt',
+        'pth_path': 'iccv2021_zennet_imagenet1k_flops400M_SE_res224/student_best-params_rank0.pth',
         'num_classes': 1000,
         'use_SE': True,
-        'resolution': 192,
+        'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_flops400M_SE_res192/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/les/iccv2021_zennet_imagenet1k_flops400M_SE_res224/student_best-params_rank0.pth',
     },
 
-    'zennet_imagenet1k_flops600M_SE_res256': {
-        'plainnet_str_txt': 'zennet_imagenet1k_flops600M_res256.txt',
-        'pth_path': 'zennet_imagenet1k_flops600M_SE_res256/student_best-params_rank0.pth',
+    'zennet_imagenet1k_flops600M_SE_res224': {
+        'plainnet_str_txt': 'zennet_imagenet1k_flops600M_res224.txt',
+        'pth_path': 'iccv2021_zennet_imagenet1k_flops600M_SE_res224/student_best-params_rank0.pth',
         'num_classes': 1000,
         'use_SE': True,
-        'resolution': 256,
+        'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_flops600M_SE_res256/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/iccv2021_zennet_imagenet1k_flops600M_SE_res224/student_best-params_rank0.pth',
     },
 
     'zennet_imagenet1k_flops900M_SE_res224': {
@@ -104,54 +104,63 @@ zennet_model_zoo = {
         'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_flops900M_SE_res224/student_best-params_rank0.pth',
     },
 
-    'zennet_imagenet1k_latency01ms_res192': {
-        'plainnet_str_txt': 'zennet_imagenet1k_latency01ms_res192.txt',
-        'pth_path': 'zennet_imagenet1k_latency01ms_res192/student_best-params_rank0.pth',
+    'zennet_imagenet1k_latency01ms_res224': {
+        'plainnet_str_txt': 'zennet_imagenet1k_latency01ms_res224.txt',
+        'pth_path': 'iccv2021_zennet_imagenet1k_latency01ms_res224/student_best-params_rank0.pth',
         'num_classes': 1000,
         'use_SE': False,
-        'resolution': 192,
+        'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_latency01ms_res192/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/iccv2021_zennet_imagenet1k_latency01ms_res224/student_best-params_rank0.pth',
     },
 
-    'zennet_imagenet1k_latency02ms_res192': {
-        'plainnet_str_txt': 'zennet_imagenet1k_latency02ms_res192.txt',
-        'pth_path': 'zennet_imagenet1k_latency02ms_res192/student_best-params_rank0.pth',
+    'zennet_imagenet1k_latency02ms_res224': {
+        'plainnet_str_txt': 'zennet_imagenet1k_latency02ms_res224.txt',
+        'pth_path': 'iccv2021_zennet_imagenet1k_latency02ms_res224/student_best-params_rank0.pth',
         'num_classes': 1000,
         'use_SE': False,
-        'resolution': 192,
+        'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_latency02ms_res192/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/iccv2021_zennet_imagenet1k_latency02ms_res224/student_best-params_rank0.pth',
     },
 
     'zennet_imagenet1k_latency03ms_res224': {
         'plainnet_str_txt': 'zennet_imagenet1k_latency03ms_res224.txt',
-        'pth_path': 'zennet_imagenet1k_latency03ms_res224/student_best-params_rank0.pth',
+        'pth_path': 'iccv2021_zennet_imagenet1k_latency03ms_res224/student_best-params_rank0.pth',
         'num_classes': 1000,
         'use_SE': False,
         'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_latency03ms_res224/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/iccv2021_zennet_imagenet1k_latency03ms_res224/student_best-params_rank0.pth',
     },
 
     'zennet_imagenet1k_latency05ms_res224': {
         'plainnet_str_txt': 'zennet_imagenet1k_latency05ms_res224.txt',
-        'pth_path': 'zennet_imagenet1k_latency05ms_res224/student_best-params_rank0.pth',
+        'pth_path': 'iccv2021_zennet_imagenet1k_latency05ms_res224/student_best-params_rank0.pth',
         'num_classes': 1000,
         'use_SE': False,
         'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_latency05ms_res224/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/iccv2021_zennet_imagenet1k_latency05ms_res224/student_best-params_rank0.pth',
     },
 
     'zennet_imagenet1k_latency08ms_res224': {
         'plainnet_str_txt': 'zennet_imagenet1k_latency08ms_res224.txt',
-        'pth_path': 'zennet_imagenet1k_latency08ms_res224/student_best-params_rank0.pth',
+        'pth_path': 'iccv2021_zennet_imagenet1k_latency08ms_res224/student_best-params_rank0.pth',
         'num_classes': 1000,
         'use_SE': False,
         'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/zennet_imagenet1k_latency08ms_res224/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/iccv2021_zennet_imagenet1k_latency08ms_res224/student_best-params_rank0.pth',
+    },
+'zennet_imagenet1k_latency12ms_res224': {
+        'plainnet_str_txt': 'zennet_imagenet1k_latency12ms_res224.txt',
+        'pth_path': 'iccv2021_zennet_imagenet1k_latency12ms_res224/student_best-params_rank0.pth',
+        'num_classes': 1000,
+        'use_SE': False,
+        'resolution': 224,
+        'crop_image_size': 380,
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/ZenNet/pretrained_models/iccv2021_zennet_imagenet1k_latency12ms_res224/student_best-params_rank0.pth',
     },
 }
 

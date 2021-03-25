@@ -51,10 +51,10 @@ if __name__ == '__main__':
 
     if opt.apex:
         from apex import amp
-    else:
-        print('Warning!!! The GENets are trained by NVIDIA Apex, '
-              'it is suggested to turn on --apex in the evaluation. '
-              'Otherwise the model accuracy might be harmed.')
+    # else:
+    #     print('Warning!!! The GENets are trained by NVIDIA Apex, '
+    #           'it is suggested to turn on --apex in the evaluation. '
+    #           'Otherwise the model accuracy might be harmed.')
 
     input_image_size = ZenNet.zennet_model_zoo[opt.arch]['resolution']
     crop_image_size = ZenNet.zennet_model_zoo[opt.arch]['crop_image_size']
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     resize_image_size = int(math.ceil(crop_image_size / input_image_crop))
     transforms_normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
     transform_list = [transforms.Resize(resize_image_size, interpolation=PIL.Image.BICUBIC),
-                      transforms.CenterCrop(resize_image_size), transforms.ToTensor(), transforms_normalize]
+                      transforms.CenterCrop(crop_image_size), transforms.ToTensor(), transforms_normalize]
     transformer = transforms.Compose(transform_list)
     val_dataset = datasets.ImageFolder(val_dir, transformer)
     val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=opt.batch_size, shuffle=False,
