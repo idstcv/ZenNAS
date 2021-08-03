@@ -7,7 +7,7 @@ ZenNAS is a lighting fast Neural Architecture Searching (NAS) algorithm for auto
 
 Our paper is available here: [arXiv link](https://arxiv.org/abs/2102.01063)
 
-## update
+## Update
 
 This work is accepted by ICCV 2021. Will release the searching and training code by the end of August.
 
