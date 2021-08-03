@@ -7,6 +7,10 @@ ZenNAS is a lighting fast Neural Architecture Searching (NAS) algorithm for auto
 
 Our paper is available here: [arXiv link](https://arxiv.org/abs/2102.01063)
 
+## update
+
+This work is accepted by ICCV 2021. Will release the searching and training code by the end of August.
+
 ## How Fast It IS
 
 Using 1 GPU searching for 12 hours, ZenNAS is able to design networks of ImageNet top-1 accuracy comparable to EfficientNet-B5 (\~83.6%) while inference speed 4.9x times faster on V100, 10x times faster on NVIDIA T4, 1.6x times faster on Google Pixel2.
