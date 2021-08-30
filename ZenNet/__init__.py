@@ -81,7 +81,7 @@ zennet_model_zoo = {
         'use_SE': True,
         'resolution': 224,
         'crop_image_size': 320,
-        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/pretrained_models/iccv2021_zennet_imagenet1k_flops400M_SE_res224/student_best-params_rank0.pth',
+        'pretrained_pth_url': 'https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/les/iccv2021_zennet_imagenet1k_flops400M_SE_res224/student_best-params_rank0.pth',
     },
 
     'zennet_imagenet1k_flops600M_SE_res224': {

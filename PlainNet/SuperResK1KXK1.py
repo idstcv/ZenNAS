@@ -28,8 +28,8 @@ class SuperResK1KXK1(PlainNetSuperBlockClass):
         self.no_reslink = no_reslink
         self.no_BN = no_BN
         self.use_se = use_se
-        # if self.use_se:
-        #     print('---debug use_se in ' + str(self))
+        if self.use_se:
+            print('---debug use_se in ' + str(self))
 
         full_str = ''
         last_channels = in_channels
@@ -116,7 +116,7 @@ class SuperResK1KXK1(PlainNetSuperBlockClass):
     def split(self, split_layer_threshold):
         if self.sub_layers >= split_layer_threshold:
             new_sublayers_1 = split_layer_threshold // 2
-            new_sublayers_2 = split_layer_threshold - new_sublayers_1
+            new_sublayers_2 = self.sub_layers - new_sublayers_1
             new_block_str1 = type(self).__name__ + '({},{},{},{},{})'.format(self.in_channels, self.out_channels,
                                                                 self.stride, self.bottleneck_channels, new_sublayers_1)
             new_block_str2 = type(self).__name__ + '({},{},{},{},{})'.format(self.out_channels, self.out_channels,
