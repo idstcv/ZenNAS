@@ -22,13 +22,19 @@
 
 # Zen-NAS: A Zero-Shot NAS for High-Performance Deep Image Recognition
 
-Zen-NAS is a lighting fast, training-free Neural Architecture Searching (NAS) algorithm for automatically designing deep neural networks with high prediction accuracy and high inference speed on GPU and mobile device. 
+Zen-NAS is a lightning fast, training-free Neural Architecture Searching (NAS) algorithm for automatically designing deep neural networks with high prediction accuracy and high inference speed on GPU and mobile device. 
 
 This repository contains pre-trained models, a mini framework for zero-shot NAS searching, and scripts to reproduce our results. You can even customize your own search space and develop a new zero-shot NAS proxy using our pipeline. Contributions are welcomed.
 
 The arXiv version of our paper is available from [here](https://arxiv.org/abs/2102.01063).
 
 ## How Fast
+=======
+## Update
+
+This work is accepted by ICCV 2021. Will release the searching and training code by the end of August.
+
+## How Fast It IS
 
 Using 1 GPU searching for 12 hours, ZenNAS is able to design networks of ImageNet top-1 accuracy comparable to EfficientNet-B5 (\~83.6%) while inference speed 4.9x times faster on V100, 10x times faster on NVIDIA T4, 1.6x times faster on Google Pixel2.
 
