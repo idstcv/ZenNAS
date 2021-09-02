@@ -4,7 +4,7 @@ set -e
 
 cd ../
 
-save_dir=../debug_save_dir/Zen_NAS_ImageNet_latency0.1ms
+save_dir=../save_dir/Zen_NAS_ImageNet_latency0.3ms
 mkdir -p ${save_dir}
 
 
