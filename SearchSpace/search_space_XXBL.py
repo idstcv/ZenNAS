@@ -1,9 +1,3 @@
-'''
-Copyright (C) 2010-2021 Alibaba Group Holding Limited.
-'''
-
-
-
 import os, sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -11,45 +5,27 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 import itertools
 
 import global_utils
-from PlainNet import basic_blocks, super_blocks, SuperResKXKX, SuperResK1KXK1, SuperResIDWEXKX
+from PlainNet import basic_blocks, super_blocks, SuperResKXKX, SuperResK1KXK1
 
 seach_space_block_type_list_list = [
-    [SuperResIDWEXKX.SuperResIDWE1K3, SuperResIDWEXKX.SuperResIDWE2K3, SuperResIDWEXKX.SuperResIDWE4K3,
-    SuperResIDWEXKX.SuperResIDWE6K3,
-    SuperResIDWEXKX.SuperResIDWE1K5, SuperResIDWEXKX.SuperResIDWE2K5, SuperResIDWEXKX.SuperResIDWE4K5,
-    SuperResIDWEXKX.SuperResIDWE6K5,
-    SuperResIDWEXKX.SuperResIDWE1K7, SuperResIDWEXKX.SuperResIDWE2K7, SuperResIDWEXKX.SuperResIDWE4K7,
-    SuperResIDWEXKX.SuperResIDWE6K7],
+    [SuperResK1KXK1.SuperResK1K3K1, SuperResK1KXK1.SuperResK1K5K1, SuperResK1KXK1.SuperResK1K7K1],
+    [SuperResKXKX.SuperResK3K3, SuperResKXKX.SuperResK5K5, SuperResKXKX.SuperResK7K7],
 ]
 
 __block_type_round_channels_base_dict__ = {
-    SuperResIDWEXKX.SuperResIDWE1K3: 8,
-    SuperResIDWEXKX.SuperResIDWE2K3: 8,
-    SuperResIDWEXKX.SuperResIDWE4K3: 8,
-    SuperResIDWEXKX.SuperResIDWE6K3: 8,
-    SuperResIDWEXKX.SuperResIDWE1K5: 8,
-    SuperResIDWEXKX.SuperResIDWE2K5: 8,
-    SuperResIDWEXKX.SuperResIDWE4K5: 8,
-    SuperResIDWEXKX.SuperResIDWE6K5: 8,
-    SuperResIDWEXKX.SuperResIDWE1K7: 8,
-    SuperResIDWEXKX.SuperResIDWE2K7: 8,
-    SuperResIDWEXKX.SuperResIDWE4K7: 8,
-    SuperResIDWEXKX.SuperResIDWE6K7: 8,
+    SuperResKXKX.SuperResK3K3: 8,
+    SuperResKXKX.SuperResK5K5: 8,
+    SuperResKXKX.SuperResK7K7: 8,
+    SuperResK1KXK1.SuperResK1K3K1: 8, SuperResK1KXK1.SuperResK1K5K1: 8, SuperResK1KXK1.SuperResK1K7K1: 8,
 }
 
 __block_type_min_channels_base_dict__ = {
-    SuperResIDWEXKX.SuperResIDWE1K3: 8,
-    SuperResIDWEXKX.SuperResIDWE2K3: 8,
-    SuperResIDWEXKX.SuperResIDWE4K3: 8,
-    SuperResIDWEXKX.SuperResIDWE6K3: 8,
-    SuperResIDWEXKX.SuperResIDWE1K5: 8,
-    SuperResIDWEXKX.SuperResIDWE2K5: 8,
-    SuperResIDWEXKX.SuperResIDWE4K5: 8,
-    SuperResIDWEXKX.SuperResIDWE6K5: 8,
-    SuperResIDWEXKX.SuperResIDWE1K7: 8,
-    SuperResIDWEXKX.SuperResIDWE2K7: 8,
-    SuperResIDWEXKX.SuperResIDWE4K7: 8,
-    SuperResIDWEXKX.SuperResIDWE6K7: 8,
+    SuperResKXKX.SuperResK3K3: 8,
+    SuperResKXKX.SuperResK5K5: 8,
+    SuperResKXKX.SuperResK7K7: 8,
+    SuperResK1KXK1.SuperResK1K3K1: 8,
+    SuperResK1KXK1.SuperResK1K5K1: 8,
+    SuperResK1KXK1.SuperResK1K7K1: 8,
 }
 
 
@@ -80,12 +56,7 @@ def gen_search_space(block_list, block_id):
 
     if isinstance(the_block, super_blocks.SuperConvKXBNRELU):
         student_blocks_list = []
-
-        if the_block.kernel_size == 1:  # last fc layer, never change fc
-            student_out_channels_list = [the_block.out_channels]
-        else:
-            student_out_channels_list = get_select_student_channels_list(the_block.out_channels)
-
+        student_out_channels_list = get_select_student_channels_list(the_block.out_channels)
         for student_out_channels in student_out_channels_list:
             tmp_block_str = type(the_block).__name__ + '({},{},{},1)'.format(
                 the_block.in_channels, student_out_channels, the_block.stride)

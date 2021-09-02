@@ -15,9 +15,9 @@ population_size=512
 epochs=480
 evolution_max_iter=480000  # we suggest evolution_max_iter=480000 for sufficient searching
 
-echo "SuperConvK3BNRELU(3,32,2,1)SuperResK3K3(32,64,2,32,1)SuperResK3K3(64,128,2,64,1)\
-SuperResK3K3(128,256,2,128,1)SuperResK3K3(256,512,2,256,1)\
-SuperConvK1BNRELU(256,2048,1,1)" > ${save_dir}/init_plainnet.txt
+echo "SuperConvK3BNRELU(3,8,2,1)SuperResIDWE6K3(8,32,2,8,1)SuperResIDWE6K3(32,48,2,32,1)\
+SuperResIDWE6K3(48,96,2,48,1)SuperResIDWE6K3(96,128,2,96,1)\
+SuperConvK1BNRELU(128,2048,1,1)" > ${save_dir}/rescaled_initial_structure.txt
 
 python evolution_search.py --gpu 0 \
   --zero_shot_score Zen \
