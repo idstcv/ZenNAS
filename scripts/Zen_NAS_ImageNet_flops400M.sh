@@ -55,5 +55,6 @@ python ts_train_image_classification.py --dataset imagenet --num_classes 1000 \
   --teacher_logit_weight 1.0 \
   --ts_proj_no_relu \
   --ts_proj_no_bn \
+  --use_se \
   --target_downsample_ratio 16 \
   --batch_size_per_gpu 64 --save_dir ${save_dir}/ts_effnet_b3ns_epochs${epochs}
