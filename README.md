@@ -14,6 +14,7 @@
     - [Searching on CIFAR-10/100](#searching-on-cifar-10100)
     - [Searching on ImageNet](#searching-on-imagenet)
   - [Customize Your Own Search Space and Zero-Shot Proxy](#customize-your-own-search-space-and-zero-shot-proxy)
+  - [FAQ](#faq)
   - [Major Contributors](#major-contributors)
   - [How to Cite This Work](#how-to-cite-this-work)
   - [Open Source](#open-source)
@@ -190,6 +191,10 @@ block_list is a list of super-blocks parsed by the masternet. block_id is the in
 
 The zero-shot proxies are implemented in "ZeroShotProxy/*.py". The evolutionary algorithm is implemented in "evolution_search.py". "analyze_model.py" prints the FLOPs and model size of the given network. "benchmark_network_latency.py" measures the network inference latency. "train_image_classification.py" implements SGD gradient training and "ts_train_image_classification.py" implements teacher-student distillation.
 
+## FAQ
+
+Q: Why it is so slow when searching with latency constraints?
+A: Most of the time is spent in benchmarking the network latency. We use a latency predictor in our paper, which is not released.
 
 ## Major Contributors
 
